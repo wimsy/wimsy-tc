@@ -1,4 +1,4 @@
-%w(sinatra haml data_mapper dm-mysql-adapter rest-client xmlsimple ./dirty_words).each  { |lib| require lib}
+%w(sinatra haml data_mapper rest-client xmlsimple ./dirty_words).each  { |lib| require lib}
 disable :show_exceptions
 enable :logging
 
