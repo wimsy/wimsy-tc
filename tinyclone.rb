@@ -44,7 +44,7 @@ end
 
 enable :inline_templates
 
-DataMapper.setup(:default, ENV['DATABASE_URL'] || 'mysql://root:miyaass@localhost/tinyclone')
+DataMapper.setup(:default, ENV['DATABASE_URL'] || 'mysql://root:root@localhost/tinyclone')
 
 class Url
   include DataMapper::Resource
