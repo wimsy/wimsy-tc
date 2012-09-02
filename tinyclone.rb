@@ -151,7 +151,7 @@ __END__
 !!! 1.1
 %html
   %head
-    %title TinyClone
+    %title wmsy.me
     %link{:rel => 'stylesheet', :href => 'http://www.blueprintcss.org/blueprint/screen.css', :type => 'text/css'}  
   %body
     .container
@@ -159,17 +159,17 @@ __END__
       = yield
 
 @@ index
-%h1.title TinyClone
+%h1.title wmsy.me
 - unless @link.nil?
   .success
     %code= @link.url.original
     has been shortened to 
     %a{:href => "/#{@link.identifier}"}
-      = "http://tinyclone.saush.com/#{@link.identifier}"
+      = "http://wmsy.me/#{@link.identifier}"
     %br
     Go to 
     %a{:href => "/info/#{@link.identifier}"}
-      = "http://tinyclone.saush.com/info/#{@link.identifier}"
+      = "http://wmsy.me/info/#{@link.identifier}"
     to get more information about this link.
 - if env['sinatra.error']
   .error= env['sinatra.error'] 
@@ -178,10 +178,12 @@ __END__
   %input{:type => 'text', :name => 'original', :size => '70'} 
   %input{:type => 'submit', :value => 'now!'}
   %br
-  to http://tinyclone.saush.com/
+  to http://wmsy.me/
   %input{:type => 'text', :name => 'custom', :size => '20'} 
   (optional)
 %p  
+%small Based on TinyClone, by Chang Sau Sheong
+%br
 %small copyright &copy;
 %a{:href => 'http://blog.saush.com'}
   Chang Sau Sheong
