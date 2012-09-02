@@ -198,7 +198,7 @@ __END__
 .span-3 Shortened
 .span-21.last
   %a{:href => "/#{@link.identifier}"}
-    = "http://tinyclone.saush.com/#{@link.identifier}"
+    = "http://wmsy.me/#{@link.identifier}"
 .span-3 Date created
 .span-21.last= @link.created_at
 .span-3 Number of visits
