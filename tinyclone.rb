@@ -27,9 +27,13 @@ end
 
 get '/:short_url' do 
   link = Link.first(:identifier => params[:short_url])
-  link.visits << Visit.create(:ip => get_remote_ip(env))
-  link.save
-  redirect link.url.original, 301
+  if link.nil?
+    redirect '/'
+  else
+    link.visits << Visit.create(:ip => get_remote_ip(env))
+    link.save
+    redirect link.url.original, 301
+  end
 end
 
 error do haml :index end
